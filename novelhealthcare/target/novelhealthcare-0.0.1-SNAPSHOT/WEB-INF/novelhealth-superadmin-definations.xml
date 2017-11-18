@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<definition name="SuperAdminBaseLayout" template="/WEB-INF/views/superadmin/baseLayout.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/superadmin/header.jsp"></put-attribute>
+		<put-attribute name="footer" value="/WEB-INF/views/superadmin/footer.jsp"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/views/superadmin/menu.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/superadmin/body.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="getSuperAdminBoard" extends="SuperAdminBaseLayout"></definition>
+	<definition name="getHospitalBoard" extends="SuperAdminBaseLayout">
+	<put-attribute name="body" value="/WEB-INF/views/superadmin/hospitalBoard.jsp"></put-attribute>
+	</definition>
+	<definition name="getHospitalRegForm" extends="SuperAdminBaseLayout"></definition>
+	<definition name="addHospitalFormDef" extends="getHospitalBoard">
+		<put-attribute name="body" value="/WEB-INF/views/superadmin/addHospital.jsp"></put-attribute>
+	</definition>
+	<definition name="editHospitalDef" extends="SuperAdminBaseLayout">
+	<put-attribute name="body" value="/WEB-INF/views/superadmin/editHospital.jsp"></put-attribute>
+	</definition>
+	<definition name="getAdminBoard" extends="SuperAdminBaseLayout">
+	<put-attribute name="body" value="/WEB-INF/views/superadmin/adminBoard.jsp"></put-attribute>
+	</definition>
+	<definition name="getAdminRegForm" extends="SuperAdminBaseLayout"></definition>
+	<definition name="addAdminFormDef" extends="getAdminBoard">
+		<put-attribute name="body" value="/WEB-INF/views/superadmin/addAdmin.jsp"></put-attribute>
+	</definition>
+	<definition name="editAdminDef" extends="SuperAdminBaseLayout">
+	<put-attribute name="body" value="/WEB-INF/views/superadmin/editAdmin.jsp"></put-attribute>
+	</definition>
+</tiles-definitions>
